@@ -1,5 +1,5 @@
 settings:
-  title: 'Hypercode Services Status'
+  title: 'HyperCode Services Status'
   url: 'https://status-page.eidam.dev' # used for Slack messages
   logo: hypercode_logo.png # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
@@ -19,6 +19,12 @@ monitors:
     name: hypercode.pl
     description: 'Main site'
     url: 'https://hypercode.pl'
+    method: GET
+    expectStatus: 200
+  - id: hyperfilm-pl
+    name: hyperfilm.pl
+    description: 'HyperFilm'
+    url: 'https://hyperfilm.pl'
     method: GET
     expectStatus: 200
   - id: lo32lodz
