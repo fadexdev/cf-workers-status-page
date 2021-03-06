@@ -1,8 +1,8 @@
 settings:
-  title: 'Status Page'
+  title: 'Hypercode Services Status'
   url: 'https://status-page.eidam.dev' # used for Slack messages
   logo: logo-192x192.png # image in ./public/ folder
-  daysInHistogram: 90 # number of days you want to display in histogram
+  daysInHistogram: 30 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
 
   allmonitorsOperational: 'All Systems Operational'
@@ -19,5 +19,17 @@ monitors:
     name: hypercode.pl
     description: 'Main site'
     url: 'https://hypercode.pl'
+    method: GET
+    expectStatus: 200
+  - id: lo32lodz
+    name: lo32lodz.pl
+    description: 'XXXII Liceum Ogólnokształcące'
+    url: 'https://lo32lodz.pl'
+    method: GET
+    expectStatus: 200
+  - id: zso1lodz
+    name: zso1lodz.pl
+    description: 'Zespół Szkół Ogólnokształcących nr 1'
+    url: 'https://zso1lodz.pl'
     method: GET
     expectStatus: 200
